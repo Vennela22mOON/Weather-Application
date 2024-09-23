@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1 class="time">12 am</h1>
+    </div>
+    <script>
+        const apikey="d11e2324dfa2254c6c15c6c2a9fd7bc5";
+        const apiurl="https://api.openweathermap.org/data/2.5/weather?units=metric&q=Bangalore";
+        async function checkweather(){
+            const response= await fetch(apiurl+`&appid=${apikey}`)
+            var data=await response.json();
+            console.log(data);
+            function convertUTCtoAMPM(data) {
+            return utcDate.toLocaleTimeString('en-US', {
+        hour: 'numeric',
+        minute: 'numeric',
+        second: 'numeric',
+        hour12: true // Use 12-hour clock with AM/PM
+    });
+}
+
+// Example usage:
+const utcDate = new Date(); // This is the current UTC time
+console.log(convertUTCtoAMPM(data.timezone)); // Outputs something like "3:45:30 PM"
+
+        }
+        checkweather();
+          
+            
+
+    </script>
+    
+</body>
+</html>

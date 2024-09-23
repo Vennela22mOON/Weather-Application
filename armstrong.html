@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>l
+    <script>
+       const num=prompt("enter a number to check whether it is armstrong number or not:");
+       const numberofdigits=num.length
+       let temp=num
+       let sum=0
+       while(temp>0){
+        console.log(typeof(temp))
+        let rem=temp%10
+        sum=sum+rem**numberofdigits
+        temp= parseInt(temp/10)
+       }
+       if(num==sum){
+        alert("the given number is armstrong number")
+       }
+       else{
+        alert("the given number is not an armstrong number")
+       }
+       
+    </script>
+    
+</body>
+</html>
